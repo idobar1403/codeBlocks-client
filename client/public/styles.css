@@ -1,97 +1,91 @@
-
-html{
-    background: #c0d2d4;
-  }
-  h1 {
-    font-weight: 900;
-    font-size: 500%;
-    text-align: center;
-    margin-top: 4rem;
-    color: #fff;
-    line-height: 1.2;
-  }
-  
-  h1 span {
-    padding: 5px 15px;
-    background: #2ec2b0;
-  }
-  
-  .blocks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 4rem auto;
-    max-width: 100%;
-  }
-  
-  .button-container > .term {
-    text-align: center;
-    max-width: 25rem;
-    /* margin-bottom: 3rem; */
-    padding: 10px;
-    border-radius: 5px;
-    /* box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.1); */
-    background-color: #fff;
-    transition: all 100ms ease-in-out;
-  }
-
-  .button {
-    background-color: #eee;
-    border: none;
-    color: #333;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px;
-    height: 90%;
-  }
-  
-  .button:hover {
-    background-color: #ddd;
-  }
-
-  .button-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-  
-  }
-
-  .code-snippet{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 150%;
-    background-color: black;
-  }
-
-  pre code.hljs {
-   
-    padding: 0em;
+html {
+  background: #c0d2d4;
+}
+h1 {
+  font-weight: 900;
+  font-size: 500%;
+  text-align: center;
+  margin-top: 4rem;
+  color: #fff;
+  line-height: 1.2;
 }
 
-.back-button{
+.blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 4rem auto;
+  max-width: 100%;
+}
+
+.button-container > .term {
+  text-align: center;
+  max-width: 25rem;
+  /* margin-bottom: 3rem; */
+  padding: 10px;
+  border-radius: 5px;
+  /* box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.1); */
+  background-color: #fff;
+  transition: all 100ms ease-in-out;
+}
+
+.button {
+  background-color: #eee;
+  border: none;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  height: 90%;
+}
+
+.button:hover {
+  background-color: #ddd;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.code-snippet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 150%;
+  background-color: black;
+}
+
+pre code.hljs {
+  padding: 0em;
+}
+
+.back-button {
   background-color: transparent;
   border: none;
+  position: "absolute";
+  top: "3px";
+  left: "3px";
 }
 
-.home-button{
+.home-button {
   background-color: transparent;
   border: none;
   width: 25px;
 }
 
 .back-button:hover {
-  background-color:#585252;
+  background-color: #585252;
   transition: 0.7s;
-
 }
 
 .home-button:hover {
-  background-color:#585252;
+  background-color: #585252;
   transition: 0.7s;
   width: 25px;
   height: 25px;
