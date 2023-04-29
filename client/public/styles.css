@@ -81,14 +81,18 @@ html{
 .home-button{
   background-color: transparent;
   border: none;
+  width: 25px;
 }
 
 .back-button:hover {
   background-color:#585252;
   transition: 0.7s;
+
 }
 
 .home-button:hover {
   background-color:#585252;
   transition: 0.7s;
+  width: 25px;
+  height: 25px;
 }
