@@ -2,6 +2,18 @@ import { useState, useEffect } from "react";
 import Card from "./Card";
 import fetchDataForButton from "../shared/Fetch_functions";
 import CodeSnippet from "./CodeSnippet";
+import { io } from "socket.io-client";
+
+const socket = io("ws://localhost:8000",{ transports: ['websocket', 'polling', 'flashsocket'] });
+
+// send a message to the server
+socket.emit("hello from client", 5, "6", { 7: Uint8Array.from([8]) });
+
+// receive a message from the server
+socket.on("hello from server", (...args) => {
+  // ...
+  console.log("connected");
+});
 
 const App = () => {
   const [listOfData, setListOfData] = useState([]);
@@ -43,7 +55,7 @@ const App = () => {
     <div className="container">
       <h1>Code Blocks</h1>
       {selectedCode ? (
-        <CodeSnippet code={selectedCode} />
+        <CodeSnippet code={selectedCode} socket={socket}/>
       ) : (
         <div className="button-container">
           {listOfData.map((data) => createCard(data, handleClick))}
