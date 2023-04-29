@@ -5,9 +5,8 @@ const CodeSnippet = (props) => {
   return (
     <pre>
       <Highlight>
-      <code contentEditable = "true" className="code-snippet"> {props.code}</code>
+      <code contentEditable = "true" className = "code-snippet"> {props.code}</code>
       </Highlight>
-      
     </pre>
   );
 };

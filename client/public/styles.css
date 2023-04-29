@@ -34,8 +34,8 @@ html{
     background-color: #fff;
     transition: all 100ms ease-in-out;
   }
+
   .button {
-    
     background-color: #eee;
     border: none;
     color: #333;
@@ -65,6 +65,30 @@ html{
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 150%;
+    background-color: black;
   }
 
-  
+  pre code.hljs {
+   
+    padding: 0em;
+}
+
+.back-button{
+  background-color: transparent;
+  border: none;
+}
+
+.home-button{
+  background-color: transparent;
+  border: none;
+}
+
+.back-button:hover {
+  background-color:#585252;
+  transition: 0.7s;
+}
+
+.home-button:hover {
+  background-color:#585252;
+  transition: 0.7s;
+}
