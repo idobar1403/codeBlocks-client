@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import Editor from "@monaco-editor/react";
 import compareCode from "../shared/Code_comparing";
 import "../assets/styles/Code_snippet_styles.css";
+import { debounce } from 'lodash';
+
 
 const CodeSnippet = (props) => {
   const [code, setCode] = useState(props.code);
@@ -27,11 +29,11 @@ const CodeSnippet = (props) => {
     });
 
     //when the editor notice a change it will emit the changes
-    editorRef.current.onDidChangeModelContent(() => {
+    editorRef.current.onDidChangeModelContent(debounce(() => {
       const value = editorRef.current.getValue();
       setIsCorrect(compareCode(value, props.solution));
       props.socket.emit("send-message", value);
-    });
+    }, 200));
   }
 
   //set the code and checks if the code equals the solution
