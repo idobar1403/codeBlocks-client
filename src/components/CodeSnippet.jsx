@@ -29,6 +29,7 @@ const CodeSnippet = (props) => {
     });
 
     //when the editor notice a change it will emit the changes
+    //doing debounce here in order to handle multiple changes at once
     editorRef.current.onDidChangeModelContent(debounce(() => {
       const value = editorRef.current.getValue();
       setIsCorrect(compareCode(value, props.solution));
