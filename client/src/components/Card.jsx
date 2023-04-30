@@ -1,4 +1,6 @@
 import React from "react";
+import "../assets/styles/Card_styles.css";
+
 
 const Card = ({ name, description, handleClick }) => {
   return (
