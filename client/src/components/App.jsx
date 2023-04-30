@@ -5,6 +5,12 @@ import CodeSnippet from "./CodeSnippet";
 import socket from "../socket/socket";
 import "../assets/styles/App_styles.css";
 
+//alert for the first client that he is the teachr
+socket.on("teacher-notification", () => {
+  alert("You are the teacher!");
+});
+
+
 const App = () => {
   const [listOfData, setListOfData] = useState([]);
   const [selectedCode, setSelectedCode] = useState(null);
